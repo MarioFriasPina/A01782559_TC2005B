@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: grey;
+}
+
+.content {
+    padding: 20px;
+    background-color: white;
+    border: 1rem solid lightskyblue;
+    border-radius: 10%;
+    margin: 50px;
+}
