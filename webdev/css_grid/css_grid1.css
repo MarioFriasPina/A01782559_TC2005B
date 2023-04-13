@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+}
+
+.grid-container{
+    margin: 20px;
+    height: 95%;
+    display: grid;
+    grid-template-columns: repeat(3, fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "header header header";
+    grid-auto-rows: minmax(20px, 1fr);
+    gap: 10px;
+}
+
+.grid-item{
+    padding: 10px;
+    background-color: white;
+    min-height: 0;
+}
+
+.red{
+    background-color: red;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.green{
+    background-color: green;
+}
+
+.cyan{
+    background-color: cyan;
+}
+
+.darkgreen{
+    background-color: darkgreen;
+}

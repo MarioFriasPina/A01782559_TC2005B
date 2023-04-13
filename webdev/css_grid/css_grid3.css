@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+}
+
+.grid-container{
+    margin: 20px;
+    height: 95%;
+    display: grid;
+    grid-template-columns: repeat(6, fr);
+    grid-template-rows: 3fr 4fr 1fr;
+    grid-template-areas: "header header header";
+    grid-auto-rows: minmax(20px, 1fr);
+    gap: 10px;
+}
+
+.grid-item{
+    padding: 10px;
+    background-color: white;
+    min-height: 0;
+}
+
+.red{
+    background-color: red;
+    grid-column: 4 / span 3;
+}
+
+.orange{
+    background-color: orange;
+    grid-column: 1 / span 3;
+}
+
+.yellow{
+    background-color: orange;
+    grid-column: 1 / span 6;
+}
+
+.green{
+    background-color: green;
+    grid-column: 3 / span 4;
+}
+
+.darkgreen{
+    background-color: darkgreen;
+    grid-column: 1 / span 2;
+}
