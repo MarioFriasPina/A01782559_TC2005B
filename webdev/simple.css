@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+    min-height: 50px;
+    background-color: rgba(37,64,75,255);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer{
+    min-height: 50px;
+    background-color: rgba(37,64,75,255);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+header div {
+    align-items: center;
+    display: flex;
+    flex-basis: 30%;
+    justify-content: space-around;
+}
+
+#course {
+    background-color: rgba(184,124,45,255);
+    padding: 50px 20%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#news {
+    min-height: 50px;
+    background-color: rgba(37,64,75,255);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:70px;
+}
+
+#news button {
+    background-color: rgba(184,124,45,255);
+    color: white;
+    border: none;
+}
+
+#flex-content {
+    padding-top:5%;
+    display: flex;
+    justify-content: space-around;
+    gap:30px;
+    flex:1;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
