@@ -25,6 +25,8 @@ public class Movement : MonoBehaviour
         else if (transform.position.x < limit && move.x > 0)
             transform.Translate(move * speed * Time.deltaTime);
     }
+
+
     void OnTriggerEnter2D(Collider2D col)
     {
         points += 1;
