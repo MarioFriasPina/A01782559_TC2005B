@@ -203,8 +203,10 @@ MonoBehaviour:
   ammo: {fileID: 3033366641866903240, guid: 8bf3a72034ef5964f9962cf3ee6d6216, type: 3}
   gun: {fileID: 703949312780303163}
   maker: {fileID: 0}
+  file: {fileID: 4900000, guid: 64eeb37947d16c148ba2087eaebbe482, type: 3}
   init_velo: 0.1
   vida: {fileID: 0}
+  puntos_text: {fileID: 0}
   puntos: 0
   health: 1
 --- !u!50 &703949314034476903

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.IO;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject gun;
     [Tooltip("Creador de Enemigos")]
     [SerializeField] EnemyMaker maker;
-    
+
     [Header("Caracteristicas de objetos")]
     [Tooltip("Velocidad inicial del objeto al disparar")]
     [SerializeField] float init_velo;
@@ -56,6 +57,25 @@ public class PlayerController : MonoBehaviour
         puntos_text.text = "Puntos: " + puntos;
     }
 
+    void updateScores()
+    {
+        string path = "Assets/Max_scores.txt";
+        int max_score = -1;
+
+        StreamReader sr = new StreamReader(path);
+        for (int i = 0; !sr.EndOfStream; i++) {
+            string line = sr.ReadLine ();
+            if (max_score < int.Parse(line))
+                max_score = int.Parse(line);
+        }
+
+        if (max_score < puntos)
+        {
+            string output = puntos.ToString();
+            File.AppendAllText(path, puntos.ToString());
+        }
+    }
+
     //Colision con un Enemigo
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -66,6 +86,7 @@ public class PlayerController : MonoBehaviour
             Destroy(col.gameObject);
 
             if (health <= 0) {
+                updateScores();
                 maker.stop();
             }
         }
