@@ -9,6 +9,17 @@ public class EnemyMaker : MonoBehaviour
     [Tooltip("Tiempo que tarda en crear cada enemigo")]
     public float time_between;
 
+
+    [Header("Possible Sprites")]
+    [SerializeField] Sprite s1;
+    [SerializeField] Sprite s2;
+    [SerializeField] Sprite s3;
+    [SerializeField] Sprite s4;
+    [SerializeField] Sprite s5;
+    [SerializeField] Sprite s6;
+
+
+
     private bool stop_spawn;
 
     // Start is called before the first frame update
@@ -62,6 +73,9 @@ public class EnemyMaker : MonoBehaviour
         return pos;
     }
 
+    /// <summary>
+    /// Una subrutina paralela a la ejecucion que crea un nuevo objeto cada determinado tiempo
+    /// </summary>
     IEnumerator myWaitCoroutine()
     {
         GameObject each;
@@ -79,25 +93,22 @@ public class EnemyMaker : MonoBehaviour
             switch(type)
             {
                 case 1:
-                    each.GetComponent<SpriteRenderer>().color = Color.black;
+                    each.GetComponent<SpriteRenderer>().sprite = s1;
                     break;
                 case 2:
-                    each.GetComponent<SpriteRenderer>().color = Color.blue;
+                    each.GetComponent<SpriteRenderer>().sprite = s2;
                     break;
                 case 3:
-                    each.GetComponent<SpriteRenderer>().color = Color.green;
+                    each.GetComponent<SpriteRenderer>().sprite = s3;
                     break;
                 case 4:
-                    each.GetComponent<SpriteRenderer>().color = Color.grey;
+                    each.GetComponent<SpriteRenderer>().sprite = s4;
                     break;
                 case 5:
-                    each.GetComponent<SpriteRenderer>().color = Color.yellow;
+                    each.GetComponent<SpriteRenderer>().sprite = s5;
                     break;
                 case 6:
-                    each.GetComponent<SpriteRenderer>().color = Color.cyan;
-                    break;
-                default:
-                    each.GetComponent<SpriteRenderer>().color = Color.red;
+                    each.GetComponent<SpriteRenderer>().sprite = s6;
                     break;
             }
         }
