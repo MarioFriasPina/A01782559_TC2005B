@@ -543,12 +543,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 6906317233327900632, guid: d3a66d3ab00e3f8438d0d65eab15c8cc, type: 3}
   time_between: 1
-  s1: {fileID: 21300000, guid: a1546fd9616224949b7acc09beabf971, type: 3}
-  s2: {fileID: 21300000, guid: 8e5167ceddfe59546bb1a595a8e1684c, type: 3}
-  s3: {fileID: 21300000, guid: 3c06a1605e8fea744bfa28e1da8953ce, type: 3}
-  s4: {fileID: 21300000, guid: 98ddf4056908d0b4599ef6f77627e193, type: 3}
-  s5: {fileID: 21300000, guid: 377fa85c45785854094b098216ab6707, type: 3}
-  s6: {fileID: 21300000, guid: f9a22cd5e0faadd4ea4a4694cdf3e4ee, type: 3}
+  s1: {fileID: 21300000, guid: 43a01b12915dc614195b15816dc5c778, type: 3}
+  s2: {fileID: 21300000, guid: bebb0103dab5a564b87d0cd432b5c24a, type: 3}
+  s3: {fileID: 21300000, guid: 704098f283e40b94a825baf9ab155c1e, type: 3}
+  s4: {fileID: 21300000, guid: 8b4baa8dfabc4564a9b87c512a2ae39e, type: 3}
+  s5: {fileID: 21300000, guid: 9d1d96b1ac1263545a278d0d7b986ebe, type: 3}
+  s6: {fileID: 21300000, guid: fecd8dfefbe919648856ea9328948e86, type: 3}
 --- !u!4 &1409279784
 Transform:
   m_ObjectHideFlags: 0

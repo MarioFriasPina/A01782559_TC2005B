@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 using System.IO;
 
@@ -68,12 +69,11 @@ public class PlayerController : MonoBehaviour
             if (max_score < int.Parse(line))
                 max_score = int.Parse(line);
         }
+        sr.Close();
 
-        if (max_score < puntos)
-        {
-            string output = puntos.ToString();
-            File.AppendAllText(path, puntos.ToString());
-        }
+        string output = "\n" + puntos.ToString();
+        File.AppendAllText(path, output);
+
     }
 
     //Colision con un Enemigo
@@ -88,6 +88,7 @@ public class PlayerController : MonoBehaviour
             if (health <= 0) {
                 updateScores();
                 maker.stop();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
     }
