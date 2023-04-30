@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Andrea Alexandra Barrón Córdova
+Mario Ignacio Frías Piña
+Oswaldo Ilhuicatzi Mendizábal
+*/
+
 public class EnemyMaker : MonoBehaviour
 {
     [Tooltip("Prefab del enemigo a crear")]

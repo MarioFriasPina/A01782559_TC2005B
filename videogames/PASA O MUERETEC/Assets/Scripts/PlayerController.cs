@@ -4,7 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using System.IO;
-
+/*
+Andrea Alexandra Barrón Córdova
+Mario Ignacio Frías Piña
+Oswaldo Ilhuicatzi Mendizábal
+*/
 public class PlayerController : MonoBehaviour
 {
     [Header("Referencias a prefabs")]

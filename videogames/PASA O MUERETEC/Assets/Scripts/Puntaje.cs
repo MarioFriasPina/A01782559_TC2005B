@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using TMPro;
+/*
+Andrea Alexandra Barrón Córdova
+Oswaldo Ilhuicatzi Mendizábal
+Mario Ignacio Frías Piña
+*/
 
 public class Puntaje : MonoBehaviour
 {

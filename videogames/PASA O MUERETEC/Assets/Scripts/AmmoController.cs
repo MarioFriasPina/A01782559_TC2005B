@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/*
+Andrea Alexandra Barrón Córdova
+Mario Ignacio Frías Piña
+Oswaldo Ilhuicatzi Mendizábal
+*/
+
 public class AmmoController : MonoBehaviour
 {
     [Header("Caracteristicas del objeto")]
