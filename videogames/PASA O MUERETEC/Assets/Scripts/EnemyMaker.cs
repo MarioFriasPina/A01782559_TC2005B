@@ -94,7 +94,7 @@ public class EnemyMaker : MonoBehaviour
 
             each = Instantiate(enemy, randomPointRect(-15, 15, -10, 10), Quaternion.identity);
 
-            type = (int)Random.Range(1, 6);
+            type = (int)Random.Range(1, 7);
 
             switch(type)
             {
