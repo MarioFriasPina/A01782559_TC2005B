@@ -18,13 +18,17 @@ document.getElementById('form1-submit').addEventListener('click', function(event
 document.getElementById('btn-insert-r').addEventListener('click', function(event) {
     // Get the table element
     let table = document.getElementById("sampleTable");
-    // Insert a new row at the end of the table
+    // Insert a new row at the beginning of the table
     let newRow = table.insertRow(-1);
-    // Insert a new cell into the new row
-    let newCell = newRow.insertCell(-1);
-    // Add some text to the new cell
-    let newText = document.createTextNode("New row text");
-    newCell.appendChild(newText); 
+    //Get number of columns of a table
+    let countCols = table.rows[1].cells.length;
+    for(let i = 0; i < countCols; i++) {
+        // Insert a new cell in the row at index 0
+        let newCell = newRow.insertCell(i);
+        // Add some text to the new cell
+        let newText = document.createTextNode("Column " + (i + 1));
+        newCell.appendChild(newText);
+    }
 });
 
 //To add a new row or column to an HTML table using JavaScript, you can use the insertRow() method to insert a new row at the specified position in the table and then use the insertCell() method to insert a new cell into the row. Here is an example of how to add a new row to an HTML table using JavaScript:
@@ -54,7 +58,7 @@ document.getElementById('btn-change').addEventListener('click', function(event) 
     let newValue = document.getElementById("newValue").value;
 
     // Update the content of the specified cell
-    table.rows[rowIndex].cells[colIndex].innerHTML = newValue;
+    table.rows[rowIndex - 1].cells[colIndex - 1].innerHTML = newValue;
 });
 
 //Remove options from select
