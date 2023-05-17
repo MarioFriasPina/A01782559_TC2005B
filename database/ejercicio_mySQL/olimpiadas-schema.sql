@@ -5,7 +5,7 @@ USE olimpiada;
 CREATE TABLE pais (
   pais_id TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
   nombre VARCHAR(45) NOT NULL,
-  numero_participantesx INT UNSIGNED NOT NULL,
+  numero_participantes INT UNSIGNED NOT NULL,
   numero_medallas INT UNSIGNED NOT NULL,
   PRIMARY KEY  (pais_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -30,10 +30,10 @@ CREATE TABLE disciplina (
 CREATE TABLE prueba (
 	prueba_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
     disciplina SMALLINT UNSIGNED NOT NULL,
-	fecha TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	fecha DATE NOT NULL,
     lugar VARCHAR(90) NOT NULL,
     numero_deportistas SMALLINT UNSIGNED NOT NULL,
-    naturaleza ENUM("Eliminatoria", "Final"),
+    naturaleza ENUM("ELIMINATORY", "FINAL"),
     PRIMARY KEY (prueba_id),
 	CONSTRAINT `fk_disciplina` FOREIGN KEY (disciplina) REFERENCES disciplina (disciplina_id) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
